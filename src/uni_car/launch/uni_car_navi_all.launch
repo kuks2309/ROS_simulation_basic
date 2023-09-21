@@ -1,0 +1,10 @@
+<launch>
+
+  
+  <include file="$(find uni_car)/launch/uni_car_navi.launch"/>
+  
+  
+  <arg name="rvizconfig" default="$(find uni_car)/rviz/uni_car_slam.rviz" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" output="screen"/>
+
+</launch>
